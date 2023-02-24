@@ -27,8 +27,19 @@
 # Todo
 
 # Procedure
+- <blender texture baking>
+    - texture bakingde cok fazla kalite kaybi oluyor
+    - duzeltmek icin photoshopta checkboard u elle duzeltiyorum
 
 # Log 
+- [0.02] chg: Template
+    - 24-Feb-2023 added test scene
+    - 24-Feb-2023 blender import
+    - 24-Feb-2023 added new scene for import test
+    - 24-Feb-2023 set orthographic camera rotation x30 y45
+    - 24-Feb-2023 unity 2021.3.16f1 lts, third person core template
+    - 23-Feb-2023 image baking tests on blender
+
 - [0.01] add: Project template
     - 22-Feb-2023 .gitignore file nested in project file
     - 22-Feb-2023 unity 2022.2 URP Core template project file created

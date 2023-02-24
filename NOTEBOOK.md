@@ -13,6 +13,12 @@
     - https://www.youtube.com/watch?v=aZ64y2-4xWQ
     - https://www.youtube.com/watch?v=Zp48BBbYLpA
 
+- export blender to unity
+    - https://www.youtube.com/watch?v=5UZ-niuRWz8
+
+- unity isometric top-down view tutorial
+    - https://www.youtube.com/watch?v=P033bFcwYWU&t=139s
+
 # Keywords
 
 # Structure
@@ -262,6 +268,23 @@
 
 
 # How to
+- <baking textures in blender>
+    - add image texture 
+    - set resolution
+    - add image to uv
+    - island margin 0.002
+    - set cycles
+        - samples 10 it is faster for baking
+    - add node wrangler
+    - on bake
+        - disable direct
+        - disable indirect
+        - bake
+    - margin = 0
+    - save texture
+    - add texture as new material
+    - fbx export
+
 - <collision is too wide>
     - reduce collision offset in your script
 
