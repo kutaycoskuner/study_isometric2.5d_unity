@@ -9,6 +9,9 @@
     - Animated PIXEL ART Characters Sprites
         - https://www.youtube.com/watch?v=eSqb6II3WMM
 
+- how we built the toon shading | open projects devlog
+    - https://www.youtube.com/watch?v=GGTTHOpUQDE
+
 - grass references
     - https://www.youtube.com/watch?v=aZ64y2-4xWQ
     - https://www.youtube.com/watch?v=Zp48BBbYLpA
@@ -20,10 +23,51 @@
     - https://www.youtube.com/watch?v=P033bFcwYWU&t=139s
 
 # Keywords
+- dot product
+- cross product
+- 3blueonebrown | vektor matematigi
+- how to migrate built-in shaders to urp blog unity
 
 # Structure
 
+
 # Blackboard
+- <math>
+    - dot product
+        - iki vektor arasindaki cos degeri 
+        - range 0, 1 
+        - isik ile normal vektorleri arasinda karsilastirma yapip uygun isiklandirma hesaplamasi icin uygulaniyor
+
+- <pixel art shader reverse engineering>
+    - starting point
+        - https://www.youtube.com/watch?v=ERA7-I5nPAU
+    - shading
+        - cel shading
+        - outline
+        - rim lights
+        - particles
+            - https://www.youtube.com/watch?v=ERA7-I5nPAU
+
+- <toon shading requirements>
+    - a custom lighting model with lights, shadows and specular contribution
+    - shadow cascades
+    - baked global illumination for static objects
+    - ambient light
+    - additional lights and shadows
+    - light probes
+
+- <shader>
+    - vert -> vertex
+    - frag -> fragment 
+    - spaces
+        - local space | object space
+        - world space
+        - view space | eye space
+        - clip space
+        - screen space
+
+    #include -. 
+
 - <geometry nodes>
     - prodecural damage
 

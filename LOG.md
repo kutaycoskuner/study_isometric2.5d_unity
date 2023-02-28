@@ -25,6 +25,12 @@
 - test: testing
 
 # Todo
+- 24-Feb-2023 model space
+- 24-Feb-2023 graphics pipeline
+- 24-Feb-2023 rendering equation
+- 24-Feb-2023 transformation pipeline
+- 24-Feb-2023 blender lod workflow
+
 
 # Procedure
 - <blender texture baking>
@@ -32,6 +38,10 @@
     - duzeltmek icin photoshopta checkboard u elle duzeltiyorum
 
 # Log 
+- [0.03] wip: Shader study
+    - 28-Feb-2023 wip: Shader study freya holmer
+    - 24-Feb-2023 self model imported for shader study
+
 - [0.02] chg: Template
     - 24-Feb-2023 added test scene
     - 24-Feb-2023 blender import
