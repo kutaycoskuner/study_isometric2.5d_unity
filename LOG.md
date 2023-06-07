@@ -37,7 +37,19 @@
     - texture bakingde cok fazla kalite kaybi oluyor
     - duzeltmek icin photoshopta checkboard u elle duzeltiyorum
 
-# Log 
+# Unity keys
+- f                         focus
+- 
+
+# Log  
+
+- [0.04] add: New testing models
+    - 07-Jun-2023 add: new models for shader testing environment
+        - Mine shape, cone, sphere, frustum, torus, cylinder, suzanne, cubes
+    - 07-Jun-2023 delete all shaders
+    - 16-Mar-2023 kaldigim yer : https://nedmakesgames.medium.com/transparent-and-crystal-clear-writing-unity-urp-shaders-with-code-part-3-f6ccd6686507
+    - 02-Mar-2023 wip: Shader study nedmakesgames
+
 - [0.03] wip: Shader study
     - 28-Feb-2023 wip: Shader study freya holmer
     - 24-Feb-2023 self model imported for shader study

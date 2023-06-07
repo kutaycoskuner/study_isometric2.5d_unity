@@ -3,7 +3,9 @@ Shader "Kutay/FreyaShader"
 	Properties
 	{
 		// color, texture
+		_Color("Color", Color) = (1,1,1,0)
 		//_MainTex ("Texture", 2D) = "white" {}
+		
 	}
 	SubShader
 	{
@@ -26,6 +28,7 @@ Shader "Kutay/FreyaShader"
 			{
 				float4 vertex : POSITION;
 				float3 normal : NORMAL;
+				float3 worldPos : TEXCOORD0;
 				//float4 colors : COLOR;
 				//float4 tangent : TANGENT;
 				//float2 uv0 : TEXCOORD0;
@@ -41,35 +44,53 @@ Shader "Kutay/FreyaShader"
 			// ----- variables tied to proerties
 			//sampler2D _MainTex;
 			//float4 _MainTex_ST;
+			float4 _Color;
 
 			vertexOutput vert(vertexInput i)
 			{
 				vertexOutput o;
 				o.normal = i.normal;
+				// o.worldPos = mul( unity_ObjectToWorld, i.vertex); // interpolator
 				o.clipSpacePos = UnityObjectToClipPos(i.vertex);
 				return o;
 			}
 
 			fixed4 frag(vertexOutput o) : SV_Target
 			{
-
-				// -- static light
+				// input: scene (static) light
 				// float3 lightDir = normalize( float3(-1, 1, 1) ); // normalize vektor boyunu 1 e mapliyor
 				// float3 lightCol = BytetoOne(float3(243, 211, 211));
 				// float3 lightCol = float3(0.9, 0.82, 0.76);
 
-				// -- scene light
+				// input: scene (dynamic) lights
 				float3 lightDir = _WorldSpaceLightPos0.xyz;
 				float3 lightCol = _LightColor0.rgb;
 
-				float lightFalloff = max(0, dot(lightDir, o.normal)); // max 0, clamping value to 0
-
-				float3 diffuseLight = lightCol * lightFalloff;
+				// input: ambient light
 				float3 ambientLight = float3(0.1, 0.12, 0.14);
-				// lambert shading
 
-				float3 mappedNormal = MaptoZeroOne(o.normal);
-				return float4(diffuseLight, 0);
+				// input: object 
+				float3 o_normal = o.normal;
+				float3 o_mappedNormal = MaptoZeroOne(o.normal);
+				float3 o_color = _Color.rgb;
+
+				// calc: direct light
+				float lightFalloff = max(0, dot(lightDir, o.normal)); // max 0, clamping value to 0
+				float3 directDiffuseLight = lightCol * lightFalloff;
+
+				// calc: direct specular light
+				float3 camPos = _WorldSpaceCameraPos;
+
+				// ----- composite light | lambert shading
+				float3 diffuseLight = ambientLight + directDiffuseLight;
+				float3 finalSurfaceColor = diffuseLight * o_color; // adding object color
+
+
+				// ------------------------------------------------------------
+				// Returns
+				// ------------------------------------------------------------
+				return float4(finalSurfaceColor, 0);
+
 				//return col;
 			}
 			ENDCG

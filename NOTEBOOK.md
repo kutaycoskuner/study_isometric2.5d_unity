@@ -2,6 +2,8 @@
 
 # Links
 - shader
+    - 3d rendered pixel art: shader progress
+        - https://www.youtube.com/watch?v=Kg4GkaSY_uc
     - realtime toon shader and outline blender 2.8 eve
         - https://www.youtube.com/watch?v=QLSZRfcUiQI
     - blender pixel art 1 min
@@ -21,6 +23,10 @@
 
 - unity isometric top-down view tutorial
     - https://www.youtube.com/watch?v=P033bFcwYWU&t=139s
+    - angles, 30/60, 45 35.4, 36
+
+- outlines
+    - https://www.youtube.com/watch?v=gSK-y3K7pNI
 
 # Keywords
 - dot product
@@ -28,10 +34,50 @@
 - 3blueonebrown | vektor matematigi
 - how to migrate built-in shaders to urp blog unity
 
-# Structure
+# History
+- 01-Mar-2023 blinn-phong shading | diffuse light + speculars
 
+- 01-Mar-2023 freya holmer in shader videosundan gidiyordum 2.36.44 civarindayim. Fakat eski built in pipeline da oldugu icin hatalar almaya basladim. baska bir tutoriala geciyorum
+    - https://www.youtube.com/watch?v=9WW5-0N1DsI
+
+# Structure
+- <>
+    - custom inspectors
+    - render queues
+    - blend modes
+    - alpha clipping
+    - window culling
+    - double-sided normals'
+    - depth > depth prepass > shadow > custom light / culling > forward > transparent > post processing
 
 # Blackboard
+- <outline shader by stormer>
+    - https://www.youtube.com/watch?v=z3llR94ckbg
+    - shadergraph
+    - params: color, scale
+    - position + scale > multiply > position
+    - color > color
+    - on object add new material > drag new material
+
+- <shader test models>
+    - cube
+    - sphere
+    - cylinder
+    - torus
+    - capsule
+    - 3d x
+    - cylinder
+    - pyramid4
+
+
+- <Doc>
+    - color
+    - normal
+    - normal mapping from -1 1 to 0 1
+    - diffuse light
+    - diffuse lgiht and color (lambert)
+    - working with real light instead of static
+
 - <math>
     - dot product
         - iki vektor arasindaki cos degeri 
