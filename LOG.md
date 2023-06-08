@@ -41,7 +41,17 @@
 - f                         focus
 - 
 
+# Push checklist
+- check logs
+- check commits
+- timelog
+- todo
+- push
+
 # Log  
+- [0.051] fix: Timelog correction
+    - 08-Jun-2023 fix: Timelog correction
+
 - [0.05] add: Rotator, CameraOrbit scripts ...
     - 08-Jun-2023 add: display: rotating test models
     - 07-Jun-2023 add: Camera Orbit script
