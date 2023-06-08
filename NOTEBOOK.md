@@ -358,6 +358,9 @@
 
 
 # How to
+- <rotating objects>
+    - https://www.youtube.com/watch?v=xk0YFoqXPtI
+
 - <baking textures in blender>
     - add image texture 
     - set resolution

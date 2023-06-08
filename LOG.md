@@ -42,6 +42,11 @@
 - 
 
 # Log  
+- [0.05] add: Rotator, CameraOrbit scripts ...
+    - 08-Jun-2023 add: display: rotating test models
+    - 07-Jun-2023 add: Camera Orbit script
+    - 07-Jun-2023 add: ground texture update more light
+    - 07-Jun-2023 add: Rotator script for the testing models
 
 - [0.04] add: New testing models
     - 07-Jun-2023 add: new models for shader testing environment
